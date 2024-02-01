@@ -8,6 +8,7 @@
                     <div class="card">
                         <div class="card-header">{{ $post->name }}</div>
                         <div class="card-body">{{ $post->description }}</div>
+                        {{ $post->type ? $post->type->name : 'senza type' }}
                     </div>
                 </div>
             @endforeach

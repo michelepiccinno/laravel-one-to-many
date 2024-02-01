@@ -12,10 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('posts', function (Blueprint $table) {
-            // $table->unsignedBigInteger("post_id")->nullable()->after("id");
-            // $table->foreign("post_id")->references("id")->on("posts")->nullOnDelete();
+            // $table->unsignedBigInteger("category_id")->nullable()->after("id");
+            // $table->foreign("category_id")->references("id")->on("categoriess")->nullOnDelete();
 
-            $table->foreignId('post_id')->nullable()->after("id")->constrained()->nullOnDelete();
+            $table->foreignId('type_id')->nullable()->after("id")->constrained()->nullOnDelete();
         });
     }
 
@@ -25,8 +25,8 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->dropForeign('posts_post_id_foreign'); //elimina il vincolo e rende la colonna un normale intero
-            $table->dropColumn('post_id'); //elimina la colonna
+            $table->dropForeign('posts_type_id_foreign'); //elimina il vincolo e rende la colonna un normale intero
+            $table->dropColumn('type_id'); //elimina la colonna
         });
     }
 };
