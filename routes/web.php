@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PostController;
+use App\Http\Controllers\Admin\TypeController;
 use App\Models\Post;
 
 /* ... */
@@ -24,7 +25,7 @@ Route::middleware(['auth'])
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
         Route::resource("posts", PostController::class);
-        Route::resource("types", PostController::class);
+        Route::resource("types", TypeController::class);
     });
 
 require __DIR__ . '/auth.php';
