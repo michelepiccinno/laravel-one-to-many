@@ -11,7 +11,8 @@ class Post extends Model
 
     protected $fillable = [
         "name",
-        "description"
+        "description",
+        "type_id"
     ];
 
     public function type()

@@ -8,7 +8,6 @@
                     <div class="card">
                         <div class="card-header">{{ $type->name }}</div>
                         <div class="card-body">{{ $type->description }}</div>
-                        {{ $type->type ? $type->type->name : 'senza type' }}
                     </div>
                 </div>
             @endforeach

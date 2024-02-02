@@ -3,7 +3,7 @@
 @section('content')
     <div class="container-fluid mt-4">
         <div class="row justify-content-center">
-            <h2>Nuova pasta</h2>
+            <h2>Nuovo tipo</h2>
             @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
@@ -19,7 +19,7 @@
                 @csrf
                 {{-- name description --}}
                 <div class="mb-3">
-                    <label for="name" class="form-label">name</label>
+                    <label for="name" class="form-label">Nome Tipo</label>
                     <input type="text" class="form-control @error('name') is-invalid @enderror" id="name"
                         name="name" value="{{ old('name') }}">
                     @error('name')
@@ -27,7 +27,7 @@
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="description" class="form-label">description</label>
+                    <label for="description" class="form-label">Descrizione Tipo</label>
                     <input type="text" class="form-control @error('description') is-invalid @enderror" id="description"
                         name="description" value="{{ old('description') }}">
                     @error('description')
